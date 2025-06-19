@@ -5,8 +5,8 @@ public class Detail {
     // Atributos - coinciden con los campos de la tabla
     private int detailId;
     private int productQuantity;
-    private double unitPrice;     // DECIMAL(10,2)
-    private double subTotalDetail; // DECIMAL(10,2)
+    private double unitPrice;
+    private double subTotalDetail;
     private int cartId;
     private int productId;
 
