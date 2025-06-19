@@ -83,16 +83,16 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_continuar"
-        android:layout_width="231dp"
-        android:layout_height="47dp"
-        android:text="Continuar"
-        android:textSize="16sp"
-        android:fontFamily="@font/manrope_extrabold"
-        android:textColor="@color/white"
+        android:layout_width="263dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="48dp"
         android:backgroundTint="@color/teal_500"
+        android:fontFamily="@font/manrope_extrabold"
+        android:text="Continuar"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="48dp"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
