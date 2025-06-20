@@ -19,6 +19,9 @@ public interface CategoryDao {
     @Query("SELECT * FROM Category ORDER BY categoryId ASC")
     List<Category> getAllCategories();
 
+    @Query("SELECT * FROM Category ORDER BY categoryId ASC")
+    androidx.lifecycle.LiveData<java.util.List<Category>> getAllCategoriesLive();
+
     @Query("SELECT * FROM Category WHERE categoryId = :id")
     Category getCategoryById(int id);
 
