@@ -7,12 +7,6 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- Back Button -->
-
-    <!-- Título con fuente ManRope -->
-
-    <!-- Contenedor de categorías -->
-
     <ImageView
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
@@ -38,35 +32,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/back_button" />
 
-    <!-- Botón Continuar -->
+
+<!-- Contenedor de categorías -->
 
     <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chip_group"
-        android:layout_width="381dp"
-        android:layout_height="42dp"
+        android:id="@+id/ChipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        android:layout_marginTop="8dp"
-        app:chipSpacing="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title">
 
-        <!-- Categorías (repetir según necesidades) -->
+        <!-- Ejemplo de un chip -->
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_mascotas"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_medium"
             android:text="Mascotas"
             android:textColor="@color/selector_chip_text"
             android:textSize="14sp"
-            app:chipBackgroundColor="@color/selector_chip_background"
-            app:chipStrokeColor="@color/selector_chip_stroke"
-            app:rippleColor="@color/transparent" />
+            app:chipBackgroundColor="@color/selector_chip_background" />
 
+        <!-- Repite para todas las categorías -->
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_maquillaje"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_medium"
@@ -74,17 +67,392 @@
             android:textColor="@color/selector_chip_text"
             android:textSize="14sp"
             app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
             app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
             app:rippleColor="@color/transparent" />
 
-        <!-- Agregar más categorías aquí... -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_almacenamiento_organizacion"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Almacenamiento y Organización"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_ropa"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Ropa"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_cuidado_piel"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Cuidado de la Piel"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_postres"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Postres"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_perfumes"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Perfumes"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_joyeria"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Joyería"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_calzados"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Calzados"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_videojuegos"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Videojuegos"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_herramientas"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Herramientas"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_muebles"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Muebles"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_hogar"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Hogar"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_jardineria"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Jardinería"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_electrodomesticos"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Electrodomésticos"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_libros_peliculas_musica"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Libros, Películas y Música"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_bolsos_equipaje"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Bolsos y Equipaje"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_bebes_ninos"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Bebés y Niños"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius= "999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_juguetes_juegos"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Juguetes y Juegos"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_tecnologia_gadgets"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Tecnología y Gadgets"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_electronica"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Electrónica"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_telefonos_celulares"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Teléfonos Celulares"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_bicicletas"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Bicicletas"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_artes_manualidades"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Artes y Manualidades"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_autopartes"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Autopartes"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_deporte_actividades_exterior"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Deporte y Actividades al Exterior"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_instrumentos_musicales"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Instrumentos Musicales"
+            android:textColor="@color/selector_chip_text"
+            android:textSize="14sp"
+            app:chipBackgroundColor="@color/selector_chip_background"
+            app:chipCornerRadius="999dp"
+            app:chipStrokeColor="@color/selector_chip_stroke"
+            app:chipStrokeWidth="2dp"
+            app:rippleColor="@color/transparent" />
 
     </com.google.android.material.chip.ChipGroup>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_continuar"
-        android:layout_width="263dp"
-        android:layout_height="71dp"
+        android:layout_width="282dp"
+        android:layout_height="72dp"
         android:layout_marginBottom="48dp"
         android:backgroundTint="@color/teal_500"
         android:fontFamily="@font/manrope_extrabold"

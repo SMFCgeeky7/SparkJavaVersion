@@ -3,4 +3,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="Spark">Spark</string>
+    <string name="back_button_desc">Back button</string>
+    <string name="favorite_icon_desc">Favorite icon</string>
+    <string name="product_image_desc">Product image</string>
 </resources>

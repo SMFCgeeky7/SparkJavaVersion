@@ -6,6 +6,8 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import androidx.room.OnConflictStrategy;
+
 import com.example.spark.data.entity.Category;
 
 import java.util.List;
@@ -28,6 +30,9 @@ public interface CategoryDao {
     @Insert
     long insertCategory(Category category);
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertCategories(List<Category> categories);
+
     @Update
     void updateCategory(Category category);
 
@@ -36,4 +41,7 @@ public interface CategoryDao {
 
     @Query("DELETE FROM Category WHERE categoryId = :id")
     void deleteCategoryById(int id);
+
+    @Query("DELETE FROM Category")
+    void deleteAll();
 }

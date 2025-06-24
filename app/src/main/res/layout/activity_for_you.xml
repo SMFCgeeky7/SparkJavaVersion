@@ -1,6 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Barra superior -->
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Título "Para ti" -->
+            <TextView
+                android:id="@+id/tv_para_ti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Para ti"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/manrope_extrabold"
+                android:gravity="start"
+                android:layout_gravity="center_vertical" />
+
+            <!-- Icono de carrito -->
+            <ImageView
+                android:id="@+id/cart_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="268dp"
+                android:src="@drawable/ic_cart"
+                app:tint="#000000" />
+
+            <View
+                android:id="@+id/cart_dot"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/bg_cart_dot"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="-24dp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- Sección "Productos destacados" -->
+
+        <!-- RecyclerView para productos destacados -->
+        <TextView
+            android:id="@+id/tv_productos_destacados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/manrope_extrabold"
+            android:text="Productos destacados"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_productos_destacados"
+            android:layout_width="414dp"
+            android:layout_height="239dp"
+            android:layout_marginTop="8dp"
+            tools:listitem="@layout/item_producto" />
+
+        <!-- Sección "Ofertas de la semana" -->
+
+        <!-- RecyclerView para ofertas de la semana -->
+
+        <TextView
+            android:id="@+id/tv_ofertas_semana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/manrope_extrabold"
+            android:text="Ofertas de la semana"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ofertas_semana"
+            android:layout_width="419dp"
+            android:layout_height="243dp"
+            android:layout_marginTop="8dp"
+            tools:listitem="@layout/item_oferta" />
+
+        <!-- Sección "Explora emprendimientos" -->
+        <TextView
+            android:id="@+id/tv_explora_emprendimientos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explora emprendimientos"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/manrope_extrabold"
+            android:layout_marginTop="16dp" />
+
+        <!-- RecyclerView para emprendimientos -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_emprendimientos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:listitem="@layout/item_emprendimiento" />
+
+        <!-- Barra de navegación inferior -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:menu="@menu/bottom_nav_menu"
+            app:itemIconTint="@color/bottom_nav_color_selector"
+            app:itemTextColor="@color/bottom_nav_color_selector" />
+
+    </LinearLayout>
+</ScrollView>
